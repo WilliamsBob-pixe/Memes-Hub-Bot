@@ -117,8 +117,8 @@ def main():
         raise SystemExit(
             "Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID environment variables. "
             "See the top of bot.py for setup instructions."
-        )
-import telegram
+        ) import telegram
+
 print("=== NEW VERSION DEPLOYED ===", flush=True)
 print("Telegram version:", telegram.__version__)
 print("Telegram location:", telegram.__file__)
