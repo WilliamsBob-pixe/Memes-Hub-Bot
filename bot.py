@@ -123,8 +123,12 @@ print("=== NEW VERSION DEPLOYED ===", flush=True)
 print("Telegram version:", telegram.__version__)
 print("Telegram location:", telegram.__file__)
 
-app = Application.builder()...token(config.TELEGRAM_BOT_TOKEN).post_init(on_startup).build()
-
+app = (
+    Application.builder()
+    .token(config.TELEGRAM_BOT_TOKEN)
+    .post_init(on_startup)
+    .build()
+)
     app.add_handler(CommandHandler("start", cmd_start))
     app.add_handler(CommandHandler("meme", cmd_meme))
     app.add_handler(CommandHandler("gif", cmd_gif))
