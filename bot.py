@@ -119,7 +119,7 @@ def main():
             "See the top of bot.py for setup instructions."
         )
 import telegram
-
+print("=== NEW VERSION DEPLOYED ===", flush=True)
 print("Telegram version:", telegram.__version__)
 print("Telegram location:", telegram.__file__)
 
