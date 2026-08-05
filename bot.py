@@ -118,6 +118,10 @@ def main():
             "Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID environment variables. "
             "See the top of bot.py for setup instructions."
         )
+import telegram
+
+print("Telegram version:", telegram.__version__)
+print("Telegram location:", telegram.__file__)
 
     app = Application.builder().token(config.TELEGRAM_BOT_TOKEN).post_init(on_startup).build()
 
